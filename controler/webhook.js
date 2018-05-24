@@ -3,8 +3,10 @@
 ********************************/
 
 require('dotenv').config();
+const API_KEY = process.env.SECRETKEY;
+const http = require('http');
 
-module.exports = (app) {
+module.exports = (app) => {
 
   app.post('/details', (req, res) => {
     const movieToSearch = req.body.result && req.body.result.parameters && req.body.result.parameters.movie ? req.body.result.parameters.movie : 'The Godfather';
@@ -22,7 +24,7 @@ module.exports = (app) {
         return res.json ({
           speech: dataToSend,
           displayText: dataToSend,
-          source: 'get-movie-details'
+          source: 'details'
         });
       });
     }, (error) => {
