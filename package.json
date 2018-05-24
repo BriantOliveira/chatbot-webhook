@@ -4,6 +4,7 @@
   "description": "This is a test utilizing webhook to generate answers to a chatbot",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elliot Oliveira",

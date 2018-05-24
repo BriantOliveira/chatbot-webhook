@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(expressSanitizer());
 
 //ROUTE LOAD
-
+require('./controler/webhook.js')(app);
 
 //Port Listener
 app.listen(PORT, function() {
